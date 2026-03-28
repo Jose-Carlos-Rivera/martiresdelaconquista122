@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import ScrollProgress from "@/components/ScrollProgress";
 import Hero from "@/components/Hero";
+import ScrollVideo from "@/components/ScrollVideo";
 import TerrainData from "@/components/TerrainData";
 import DevelopmentPotential from "@/components/DevelopmentPotential";
 import Gallery from "@/components/Gallery";
@@ -17,6 +18,7 @@ export default function Home() {
       <ScrollProgress />
       <Navbar />
       <Hero />
+      <ScrollVideo />
       <TerrainData />
       <DevelopmentPotential />
       <Gallery />
