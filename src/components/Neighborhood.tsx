@@ -133,7 +133,7 @@ export default function Neighborhood() {
             entre Tacubaya, Condesa y Chapultepec la convierte en una de las
             colonias con mayor potencial de plusvalía en CDMX.
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
             {[
               { label: "Precio/m² zona", value: "~$49,000" },
               { label: "Plusvalía anual", value: "4-8%" },
