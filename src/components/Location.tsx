@@ -67,14 +67,15 @@ export default function Location() {
           className="rounded-2xl overflow-hidden mb-12 border border-gold-500/10"
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.7!2d-99.1767!3d19.3983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff5b4b9c4e7f%3A0x0!2sMartires+de+la+Conquista+122%2C+Escandon+I+Secc%2C+Miguel+Hidalgo%2C+11800+Ciudad+de+Mexico!5e0!3m2!1ses!2smx!4v1"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1882.5!2d-99.17670!3d19.39830!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff5b4b9c4e7f%3A0x0!2sMartires+de+la+Conquista+122%2C+Escandon+I+Secc%2C+Miguel+Hidalgo%2C+11800+Ciudad+de+Mexico!5e0!3m2!1ses!2smx!4v1"
             width="100%"
-            height="400"
+            height="450"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="w-full"
+            title="Ubicación del terreno - Mártires de la Conquista 122, Escandón"
           />
         </motion.div>
 
