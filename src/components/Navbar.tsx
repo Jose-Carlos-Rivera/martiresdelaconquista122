@@ -52,8 +52,8 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "glass py-2.5 shadow-lg shadow-navy-950/50"
-          : "bg-transparent py-5"
+          ? "glass py-2 shadow-lg shadow-navy-950/50"
+          : "bg-transparent py-3 sm:py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
