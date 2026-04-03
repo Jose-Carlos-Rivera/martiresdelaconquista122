@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { FileText, Download, Eye, Shield } from "lucide-react";
+import { FileText, Eye, Shield } from "lucide-react";
 
 const documents = [
   {
@@ -86,22 +86,10 @@ export default function Documents() {
                     {doc.name}
                   </h3>
                   <p className="text-navy-400 text-xs mb-3">{doc.desc}</p>
-                  {doc.available ? (
-                    <a
-                      href={doc.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-gold-400 hover:text-gold-300 text-xs font-medium"
-                    >
-                      <Download size={14} />
-                      Descargar PDF
-                    </a>
-                  ) : (
-                    <span className="inline-flex items-center gap-1.5 text-navy-500 text-xs">
-                      <Eye size={14} />
-                      Disponible bajo solicitud
-                    </span>
-                  )}
+                  <span className="inline-flex items-center gap-1.5 text-navy-500 text-xs">
+                    <Eye size={14} />
+                    Disponible bajo solicitud
+                  </span>
                 </div>
               </div>
             </motion.div>
