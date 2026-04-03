@@ -123,7 +123,7 @@ export default function QRPage() {
         >
           {[
             { value: "501 m²", label: "Terreno" },
-            { value: "H/5/30", label: "Uso habitacional" },
+            { value: "H/5/30/A", label: "Uso habitacional" },
             { value: "$18,500,000", label: "MXN" },
           ].map((stat) => (
             <div
@@ -171,7 +171,7 @@ export default function QRPage() {
             className="flex items-center justify-center gap-2 py-3.5 rounded-2xl bg-navy-800 hover:bg-navy-700 border border-navy-700 text-white font-bold text-sm transition-all active:scale-95"
           >
             <ExternalLink size={16} />
-            EasyBroker
+            Ficha Técnica
           </a>
         </motion.div>
 

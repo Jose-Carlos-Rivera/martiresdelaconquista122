@@ -30,8 +30,8 @@ const documents = [
     available: false,
   },
   {
-    name: "Certificado de No Adeudo de Agua",
-    desc: "Sin adeudos con el Sistema de Aguas de la CDMX",
+    name: "Boleta de Agua",
+    desc: "Al corriente con el Sistema de Aguas de la CDMX",
     icon: FileText,
     available: false,
   },

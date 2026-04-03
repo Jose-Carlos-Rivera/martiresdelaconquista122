@@ -42,7 +42,7 @@ const contactMethods = [
 const socialLinks = [
   {
     icon: ExternalLink,
-    label: "EasyBroker",
+    label: "Ficha Técnica",
     href: "https://www.easybroker.com/mx/listing/marisol466/terreno-en-venta-501-m-uso-de-suelo-habitacional-escandon-miguel-hidalgo",
   },
   {
