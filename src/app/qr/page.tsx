@@ -3,20 +3,8 @@
 import { motion } from "framer-motion";
 import { Building2, Phone, ExternalLink } from "lucide-react";
 
-// App-style grid buttons (3 per row)
+// 4 square grid buttons (2x2)
 const gridLinks = [
-  {
-    label: "Página Web",
-    href: "https://martiresdelaconquista122.com",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-      </svg>
-    ),
-    bg: "bg-gradient-to-br from-gold-500/20 to-gold-600/10",
-    iconColor: "text-gold-400",
-  },
   {
     label: "Video Dron",
     href: "#",
@@ -27,7 +15,6 @@ const gridLinks = [
       </svg>
     ),
     bg: "bg-gradient-to-br from-red-500/15 to-red-600/5",
-    iconColor: "text-red-500",
   },
   {
     label: "WhatsApp",
@@ -38,21 +25,6 @@ const gridLinks = [
       </svg>
     ),
     bg: "bg-gradient-to-br from-green-500/15 to-green-600/5",
-    iconColor: "text-green-500",
-  },
-  {
-    label: "Ficha PDF",
-    href: "https://martiresdelaconquista122.com/FICHA_TERRENO_MARTIRES_122.pdf",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-        <polyline points="14 2 14 8 20 8" />
-        <line x1="16" y1="13" x2="8" y2="13" />
-        <line x1="16" y1="17" x2="8" y2="17" />
-      </svg>
-    ),
-    bg: "bg-gradient-to-br from-blue-400/15 to-blue-500/5",
-    iconColor: "text-blue-400",
   },
   {
     label: "Instagram",
@@ -72,7 +44,6 @@ const gridLinks = [
       </svg>
     ),
     bg: "bg-gradient-to-br from-pink-500/15 to-purple-500/10",
-    iconColor: "text-pink-500",
   },
   {
     label: "Facebook",
@@ -83,7 +54,6 @@ const gridLinks = [
       </svg>
     ),
     bg: "bg-gradient-to-br from-blue-600/15 to-blue-700/5",
-    iconColor: "text-blue-600",
   },
 ];
 
@@ -150,7 +120,7 @@ export default function QRPage() {
           Alcaldía Miguel Hidalgo, C.P. 11800, CDMX
         </motion.p>
 
-        {/* Two priority buttons */}
+        {/* Two priority buttons: Llamar + Ficha Técnica */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -175,14 +145,35 @@ export default function QRPage() {
           </a>
         </motion.div>
 
-        {/* App-style grid buttons */}
+        {/* Full-width Página Web button */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.28 }}
+          className="w-full"
+        >
+          <a
+            href="https://martiresdelaconquista122.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 py-3.5 rounded-2xl bg-navy-800 hover:bg-navy-700 border border-gold-500/20 text-white font-bold text-sm transition-all active:scale-95 w-full"
+          >
+            <svg viewBox="0 0 24 24" className="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            Página Web
+          </a>
+        </motion.div>
+
+        {/* 2x2 grid buttons */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="grid grid-cols-3 gap-2.5 w-full"
+          className="grid grid-cols-2 gap-2.5 w-full"
         >
-          {gridLinks.map((link, i) => (
+          {gridLinks.map((link) => (
             <a
               key={link.label}
               href={link.comingSoon ? undefined : link.href}

@@ -39,8 +39,7 @@ const documents = [
     name: "Ficha Técnica del Terreno",
     desc: "Especificaciones, medidas, colindancias y potencial",
     icon: Eye,
-    available: true,
-    href: "/FICHA_TERRENO_MARTIRES_122.pdf",
+    available: false,
   },
 ];
 
