@@ -60,7 +60,7 @@ const galleryItems = [
     label: "Video con dron",
     span: "",
     aspect: "aspect-square",
-    comingSoon: true,
+    href: "https://youtube.com/shorts/ieRVh45MJ6E",
   },
 ];
 
@@ -72,7 +72,12 @@ export default function Gallery() {
   const photoItems = galleryItems.filter((item) => !("type" in item));
 
   const openLightbox = (index: number) => {
-    if ("comingSoon" in galleryItems[index]) return;
+    const item = galleryItems[index];
+    if ("href" in item && item.href) {
+      window.open(item.href, "_blank", "noopener,noreferrer");
+      return;
+    }
+    if ("type" in item) return;
     setLightbox(index);
   };
 
@@ -85,7 +90,7 @@ export default function Gallery() {
     while (
       next >= 0 &&
       next < galleryItems.length &&
-      "comingSoon" in galleryItems[next]
+      "type" in galleryItems[next]
     ) {
       next += dir;
     }
@@ -124,19 +129,19 @@ export default function Gallery() {
                 onClick={() => openLightbox(i)}
                 className={`relative group overflow-hidden rounded-xl sm:rounded-2xl border border-navy-800/50 hover:border-gold-500/30 transition-all ${item.span} ${item.aspect}`}
               >
-                {"comingSoon" in item ? (
-                  <div className="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-900/90 to-navy-800 flex flex-col items-center justify-center gap-3 p-4">
-                    <div className="w-12 h-12 rounded-full bg-gold-500/20 border border-gold-500/30 flex items-center justify-center">
+                {"type" in item ? (
+                  <div className="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-900/90 to-navy-800 flex flex-col items-center justify-center gap-3 p-4 group-hover:from-navy-800 transition-all">
+                    <div className="w-12 h-12 rounded-full bg-red-500/20 border border-red-500/30 flex items-center justify-center group-hover:bg-red-500/30 transition-colors">
                       <Play
                         size={20}
-                        className="text-gold-400 ml-0.5"
+                        className="text-red-400 ml-0.5"
                         fill="currentColor"
                       />
                     </div>
-                    <p className="text-navy-400 text-xs font-medium">
+                    <p className="text-white text-xs font-medium">
                       Video con dron
                     </p>
-                    <p className="text-navy-600 text-[10px]">Próximamente</p>
+                    <p className="text-navy-400 text-[10px]">Ver en YouTube</p>
                   </div>
                 ) : (
                   <>
@@ -164,7 +169,7 @@ export default function Gallery() {
       </section>
 
       {/* Lightbox */}
-      {lightbox !== null && !("comingSoon" in galleryItems[lightbox]) && (
+      {lightbox !== null && !("type" in galleryItems[lightbox]) && (
         <div
           className="fixed inset-0 bg-navy-950/95 z-[100] flex items-center justify-center p-4"
           onClick={closeLightbox}
