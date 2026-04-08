@@ -175,25 +175,18 @@ export default function QRPage() {
           {gridLinks.map((link) => (
             <a
               key={link.label}
-              href={link.comingSoon ? undefined : link.href}
+              href={link.href}
               target={link.href?.startsWith("http") ? "_blank" : undefined}
               rel={
                 link.href?.startsWith("http")
                   ? "noopener noreferrer"
                   : undefined
               }
-              className={`flex flex-col items-center justify-center gap-2 py-4 rounded-2xl border border-navy-800/60 hover:border-navy-700 transition-all active:scale-95 ${link.bg} ${
-                link.comingSoon ? "opacity-40 cursor-not-allowed" : ""
-              }`}
+              className={`flex flex-col items-center justify-center gap-2 py-4 rounded-2xl border border-navy-800/60 hover:border-navy-700 transition-all active:scale-95 ${link.bg}`}
             >
               {link.icon}
               <span className="text-white text-[10px] sm:text-xs font-medium text-center leading-tight">
                 {link.label}
-                {link.comingSoon && (
-                  <span className="block text-[8px] text-navy-400 mt-0.5">
-                    Próximamente
-                  </span>
-                )}
               </span>
             </a>
           ))}
