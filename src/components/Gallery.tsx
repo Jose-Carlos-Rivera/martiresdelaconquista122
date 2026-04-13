@@ -60,7 +60,7 @@ const galleryItems = [
     label: "Video con dron",
     span: "",
     aspect: "aspect-square",
-    href: "https://youtube.com/shorts/ieRVh45MJ6E",
+    href: "https://youtu.be/EfFiDVLjpZY",
   },
 ];
 
